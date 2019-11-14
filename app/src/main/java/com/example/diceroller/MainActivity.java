@@ -21,7 +21,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     int count = 0;
-    static ArrayList<String> alist = new ArrayList<>();
+    static ArrayList<String> questions = new ArrayList<>();
     public static final String EXTRA_MESSAGE = "Hi";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        alist.add("if you could go anywhere in the world, where would you go");
-        alist.add("if you were stranded on a desert island, what three things would you want to take with you");
-        alist.add("if you could eat only one food for the rest of your life, what would that be?");
-        alist.add("if you won a million dollars, what is the first thing you would buy?");
-        alist.add("if you could spend the day with one fictional character, who would it be?");
-        alist.add("if you found a magic lantern and a genie gave you three wishes, what would you wish");
+        questions.add("if you could go anywhere in the world, where would you go");
+        questions.add("if you were stranded on a desert island, what three things would you want to take with you");
+        questions.add("if you could eat only one food for the rest of your life, what would that be?");
+        questions.add("if you won a million dollars, what is the first thing you would buy?");
+        questions.add("if you could spend the day with one fictional character, who would it be?");
+        questions.add("if you found a magic lantern and a genie gave you three wishes, what would you wish");
 
     }
     public void sendMessage(View view){
@@ -110,8 +110,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void D_ICEBRAKERS(View view){
         TextView tv4 = this.findViewById(R.id.textView);
-        int number3 = Random(alist.size());
-        tv4.setText(alist.get(number3));
+        int number3 = Random(questions.size());
+        tv4.setText(questions.get(number3));
 
     }
     public int Random (int n){
